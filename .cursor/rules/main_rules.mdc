@@ -1,5 +1,22 @@
 ---
-description:
-globs:
-alwaysApply: false
+description: 
+globs: 
+alwaysApply: true
 ---
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+{  
+    "context7": "Всегда используй context7 для которого настроен MCP сервер здесь в cursor IDE"
+    "ignore": "Правила, которыми должен руководствоваться агент в текущем процессе, могут считаться только файлы в папке .cursor\rules"
+    
+    "terminal":{
+        "githubLog":"Не запускать команду git log --oneline а запускать git log --oneline | cat"
+    }
+    
+
+}
+
