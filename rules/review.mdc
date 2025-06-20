@@ -1,0 +1,131 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+{
+  "$schema": "https://app.cursor.so/schemas/v1/rules.schema.json",
+  "rules": [
+    {
+      "name": "No hallucinated APIs",
+      "description": "Проверь, что все используемые библиотеки, функции и API действительно существуют. Не должно быть вымышленных методов или импортов.",
+      "importance": "critical",
+      "pattern": ".*",
+      "category": "Correctness"
+    },
+    {
+      "name": "pipeline",
+      "description": "Проверь что pipeline из .cursor\rules\dev.mdc выполнен полностью, неукаснительно и дословно",
+      "importance": "critical",
+      "pattern": ".*",
+      "category": "pipeline"
+    },
+    {
+      "name": "context7",
+      "description": "Проверь код и архитектуру на соответствие context7",
+      "importance": "critical",
+      "pattern": ".*",
+      "category": "codearch"
+    },
+    {
+      "name": "Avoid overengineering",
+      "description": "Не добавляй лишней сложности. Структура кода должна быть оправданной и соразмерной задаче.",
+      "importance": "high",
+      "pattern": ".*",
+      "category": "Simplicity"
+    },
+    {
+      "name": "Ensure modularity",
+      "description": "Код должен быть модульным. Разделяй бизнес-логику, контроллеры, утилиты и инфраструктурные зависимости.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Architecture"
+    },
+    {
+      "name": "Enforce consistent naming",
+      "description": "Именование переменных, функций и классов должно быть логичным и согласованным во всём коде. Без автогенерированных аббревиатур.",
+      "importance": "high",
+      "pattern": ".*",
+      "category": "Style"
+    },
+    {
+      "name": "Avoid redundant code",
+      "description": "Исключи дублирование. Используй переиспользуемые функции и шаблоны.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Efficiency"
+    },
+    {
+      "name": "Check for unhandled errors",
+      "description": "Убедись, что все ошибки и исключения обрабатываются корректно. Не оставляй пустые блоки catch или игнорируемые ошибки.",
+      "importance": "critical",
+      "pattern": ".*",
+      "category": "Reliability"
+    },
+    {
+      "name": "Respect framework conventions",
+      "description": "Соблюдай стандарты и лучшие практики выбранного фреймворка (например, NestJS, React, Next.js и др.).",
+      "importance": "high",
+      "pattern": ".*",
+      "category": "Convention"
+    },
+    {
+      "name": "Add self-check assertions",
+      "description": "Добавь минимальные проверки или комментарии, подтверждающие, что код протестирован или логически завершён. AI должен 'объяснять' свои действия.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Explainability"
+    },
+    {
+      "name": "Security best practices",
+      "description": "Проверь, что в коде нет потенциальных XSS/SQLi/CSRF и других уязвимостей. Не логируй чувствительные данные.",
+      "importance": "critical",
+      "pattern": ".*",
+      "category": "Security"
+    },
+    {
+      "name": "Proper comments on AI assumptions",
+      "description": "AI должен оставлять комментарии к нестандартным решениям, чтобы пояснить, почему они были выбраны. Особенно если есть неоднозначность в задании.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Transparency"
+    },
+    {
+      "name": "Technical documentation completeness",
+              "description": "Проверь, что создана/обновлена техническая документация согласно .cursor/rules/tech_docs.mdc. API документация, архитектурные схемы, инструкции по настройке должны быть актуальными.",
+      "importance": "high",
+      "pattern": ".*",
+      "category": "Documentation"
+    },
+    {
+      "name": "User documentation quality",
+      "description": "Убедись, что пользовательская документация понятна целевой аудитории. Инструкции должны быть пошаговыми, с примерами использования.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Documentation"
+    },
+    {
+      "name": "ASCII diagrams correctness",
+      "description": "Проверь, что ASCII диаграммы корректно отображают архитектуру, процессы или структуры данных. Диаграммы должны быть понятными и точными.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Documentation"
+    },
+    {
+      "name": "Deployment documentation accuracy",
+      "description": "Для задач деплоя проверь, что документация содержит актуальные инструкции по развертыванию, rollback процедуры, troubleshooting guide и runbook.",
+      "importance": "high",
+      "pattern": ".*",
+      "category": "Documentation"
+    },
+    {
+      "name": "Documentation maintenance",
+      "description": "Убедись, что существующая документация обновлена в соответствии с изменениями в коде или процессах. Устаревшая информация должна быть исправлена.",
+      "importance": "medium",
+      "pattern": ".*",
+      "category": "Documentation"
+    }
+  ]
+}
+
+
